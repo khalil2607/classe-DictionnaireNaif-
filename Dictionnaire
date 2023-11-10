@@ -62,7 +62,14 @@ public interface Dictionnaire {
      * @param m
      * @return
      */
-    public boolean contient(String m);
+    public boolean contient(String m){
+        int i=0;
+        while(i!=mots.length() && !(mots[i]==m)){
+            i=i+1;
+        }
+        return !(i==mots.length())
+    }
+
 
     /**
      * renvoie le nombre de mots de m.
