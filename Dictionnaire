@@ -67,7 +67,7 @@ public interface Dictionnaire {
         while(i!=mots.length() && !(mots[i]==m)){
             i=i+1;
         }
-        return !(i==mots.length())
+        return !(i==mots.length());
     }
 
 
