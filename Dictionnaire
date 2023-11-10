@@ -11,6 +11,7 @@ import java.util.Map;
  */
 public interface Dictionnaire {
 
+    private String[] mots;
     private Map<String, Integer> indices; 
     indices = new HashMap<>();
 
@@ -48,8 +49,14 @@ public interface Dictionnaire {
      * @param i l'indice du mot à renvoyer
      * @return
      */
-    public String motIndice(int i);
-
+    public String motIndice(int i) {
+        // Vérifiez si l'indice est dans la plage valide
+        if (i >= 0 && i < mots.length) {
+            return mots[i];
+        } else {
+            return "";
+        }
+    }
     /**
      * renvoie vrai ssi m est dans le dictionnaire.
      * @param m
